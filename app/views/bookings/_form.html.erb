@@ -1,0 +1,7 @@
+<%= simple_form_for (@booking) do |f| %>
+    <%= f.input :check_in %>
+    <%= f.input :check_out %>
+    <%= f.submit "Check", class: "btn btn-primary" %>
+<% end %>
+
+<!-- TO add the references to flat.city and flat.size once Flat is created -->
