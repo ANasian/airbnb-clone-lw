@@ -1,3 +1,8 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
 input {
   border-radius: 16px;
   padding: 16px;
@@ -5,4 +10,8 @@ input {
   border: none;
   margin-top: 16px;
   margin-right: 16px;
+}
+
+.search-button {
+  text-align: center;
 }
