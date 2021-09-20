@@ -1,25 +1,7 @@
 // Specific CSS for your home-page
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-}
-
-.banner h1 {
-  color: white;
-  font-size: 48px;
-  font-weight: bold;
-  margin-right: 16px;
-}
-
-.banner p {
-  margin-right: 16px;
-  font-size: 24px;
-  color: white;
-  opacity: .8;
-  margin-top: 8px;
-}
-
-.main-header {
-  text-align: center;
+.container-home {
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 }

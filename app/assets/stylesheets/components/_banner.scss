@@ -1,0 +1,87 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  margin-right: 16px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.1)
+}
+
+.banner p {
+  margin-right: 16px;
+  font-size: 24px;
+  color: white;
+  opacity: .8;
+  margin-top: 8px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.1)
+}
+
+.main-header {
+  text-align: center;
+}
+
+.product-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+  cursor: pointer;
+  width: 50%;
+  height: 90px;
+}
+
+.search-element {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  border-right: 1px solid rgba(10,10,10,.1);
+  padding: 1em;
+}
+
+.search-label {
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.search-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.search-input:focus {
+  box-shadow: 0px 2px 0px 0px #FF395B;
+}
+
+.search-button {
+  flex-grow: 1;
+  background-color: #E31C5E;
+  height: 100%;
+  font-size: 1.2em;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  .fas.fa-search {
+    font-size: 1.5em;
+    color: white;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+  }
+}

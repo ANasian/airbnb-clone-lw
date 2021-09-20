@@ -3,27 +3,24 @@
   <div class="main-header">
     <h1>Airbnb</h1>
     <p>You can live anywhere</p>
+  </div class="search-bar">
+    <form action="/flats" method="get" id="search-form">
+      <div class="product-search">
+          <div class="search-element">
+            <label class="search-label mb-1">Location</label>
+            <input class="search-input" type="text" autocomplete="off" placeholder="Where are you going?" name="city">
+          </div>
+          <div class="search-element">
+            <label class="search-label mb-1">Guests</label>
+            <input class="search-input" type="number" placeholder="Add guests" class="" autocomplete="off" name="size">
+          </div>
+          <div class="search-button d-flex align-items-center">
+            <button type="submit" form="search-form">
+              <a type="submit" class="text-decoration-none text-white ml-4">Search</a>
+              <i class="fas fa-search ml-1"></i>
+            </button>
+          </div>
+      </div>
+    </form>
   </div>
-
-<!--   <div class="search-form">
-    <input type="text" placeholder="Where" id="where">
-
-    <input type="date" name="check-in" id="check-in">
-    <input type="date" name="check-out" id="check-out">
-
-    <input type="text" placeholder="Guests" id="guests">
-  </div>
-
-  <div class="search-button">
-    <a href="#">
-      <button type="button" class="btn btn-lg">Search</button>
-    </a>
-  </div> -->
-
-  <%= simple_form_for @flat, url: flats_path, method: "GET" do |f| %>
-    <%= f.input :city, required: true %>
-    <%= f.input :size %>
-    <%= f.submit "Search" %>
-  <% end %>
-
 </div>
