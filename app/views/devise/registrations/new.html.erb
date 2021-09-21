@@ -7,6 +7,8 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
+          <%= f.input :name, label: "First Name" %>
+          <%= f.input :lastname, label: "Last Name" %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
@@ -18,13 +20,16 @@
           <%= f.input :password_confirmation,
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
+          <%= f.input :owner, as: :boolean, label: "Click here if you are an Host",
+                      wrapper_html: { class: "mt-5 p-2", id: "owner-input" },
+                      input_html: { data: { toggle: "toggle", size: "xs" } } %>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Sign up" %>
+          <%= f.button :submit, "Sign up", class: "btn btn-primary w-100" %>
         </div>
       <% end %>
-
+      <br>
       <%= render "devise/shared/links" %>
 
     </div>
