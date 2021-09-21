@@ -1,9 +1,13 @@
 .btn {
-  background-color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 32px;
-  margin-top: 40px;
-  margin-right: 16px;
+  border-radius: 5px;
 }
 
+.button-avatar {
+  border: 1px solid #cecccc;
+  padding: 2px 5px;
+  border-radius: 15px;
+}
+
+.dropdown-menu {
+  border-radius: 15px;
+}
