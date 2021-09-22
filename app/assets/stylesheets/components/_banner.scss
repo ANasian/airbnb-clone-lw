@@ -67,7 +67,7 @@
 }
 
 .search-button {
-  flex-grow: 1;
+  flex-grow: 0.5;
   background-color: #E31C5E;
   height: 100%;
   font-size: 1.2em;
@@ -83,5 +83,6 @@
     background-color: transparent;
     border: none;
     appearance: none;
+    margin-left: 4px;
   }
 }

@@ -1,7 +1,6 @@
-<h1>Lists of Flats</h1>
+<div class="container-list">
+  <h1>Results in the selected area</h1>
+  <br>
+  <%= render partial: 'flat_list', collection: @flats %>
+</div>
 
-<ul>
-  <% @flats.each do |item| %>
-    <li><%= link_to item.title, flat_path(item) %></li>
-  <% end %>
-</ul>

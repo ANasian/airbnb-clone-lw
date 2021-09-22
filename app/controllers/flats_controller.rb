@@ -3,10 +3,11 @@ class FlatsController < ApplicationController
   before_action :find_flat, only: [:show, :edit, :update, :destroy]
 
   def index
+    @city = params[:city].capitalize
     if params[:size] != ""
-      @flats = Flat.where("city = ? AND size = ?", params[:city].capitalize, params[:size])
+      @flats = Flat.where("city = ? AND size = ?", @city, params[:size])
     else
-      @flats = Flat.where("city = ?", params[:city].capitalize)
+      @flats = Flat.where("city = ?", @city)
     end
   end
 
