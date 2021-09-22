@@ -1,11 +1,14 @@
-<div class="container-list">
-  <h1>Results in the selected area</h1>
-  <br>
-  <%= render partial: 'flat_list', collection: @flats %>
+<div class="d-flex">
+  <div class="container-list">
+    <h1>Results in the selected area</h1>
+    <br>
+    <%= render partial: 'flat_list', collection: @flats %>
+    </div>
+
+  <div id="map"
+       style="height: 100vh; width: 40%;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">    
+  </div>
 </div>
 
-<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">    
-</div>
