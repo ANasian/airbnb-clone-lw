@@ -1,21 +1,19 @@
-<% @flats.each do |flat| %>
-  <a href="/flats/<%= flat.id %>" class="link-flat">
-    <div class="card-flat">
-      <img src="https://source.unsplash.com/random" alt="flat_photo">
-      <div class="flat-info">
-        <small><%= @city %></small>
-        <h3><%= flat.title.upcase %></h3>
-        <div class="hr"><hr></div>
-        <div class="flat-size">
-          <p><small>· <%= flat.size %> Guests ·</small></p>
-          <p><%= flat.description %></p>
-        </div>
-      </div>
-      <div class="price d-flex">
-        <i class="fas fa-euro-sign mx-2 mt-1"></i>
-        <p><%= flat.price %></p>
-        <small>/Night</small>
+<a href="/flats/<%= flat.id %>" class="link-flat" target="blank">
+  <div class="card-flat mb-3">
+    <img src="https://source.unsplash.com/random" alt="flat_photo">
+    <div class="flat-info">
+      <small><%= @city %></small>
+      <h3><%= flat.title.upcase %></h3>
+      <div class="hr"><hr></div>
+      <div class="flat-size">
+        <p><small>· <%= flat.size %> Guests ·</small></p>
+        <p><%= flat.description %></p>
       </div>
     </div>
-  </a>
-<% end %>
+    <div class="price d-flex">
+      <i class="fas fa-euro-sign mx-2 mt-1"></i>
+      <p><%= flat.price %></p>
+      <small>/Night</small>
+    </div>
+  </div>
+</a>
