@@ -1,18 +1,11 @@
-<!-- <div>
-  <img src="https://images.unsplash.com/photo-1515173792234-45cf00e907eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZsYXQlMjByb21lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="colosseo">
-  <h3><%= link_to flat.title, flat_path(flat) %></h3>
-  <p><%= flat.address %>, <%= flat.city %></p>
-  <p><%= flat.description %></p>
-</div> -->
-
 <div class="card-trip">
-  <img src="https://images.unsplash.com/photo-1515173792234-45cf00e907eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZsYXQlMjByb21lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" />
+  <img src="https://source.unsplash.com/random" />
   <div class="card-trip-infos">
     <div>
       <h2><%= link_to flat.title, flat_path(flat) %></h2>
       <p><%= flat.description %></p>
     </div>
     <h2 class="card-trip-pricing"><%= flat.price %> €/night</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <%= image_tag 'placeholder.png', class: "card-trip-user avatar-bordered" %>
   </div>
 </div>
