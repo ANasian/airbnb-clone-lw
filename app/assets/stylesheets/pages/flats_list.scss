@@ -1,0 +1,50 @@
+.container-list {
+  margin-top: 8px;
+  margin-left: 16px;
+  flex-grow: 1;
+  .link-flat {
+    appearance: none;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+#map {
+  position: sticky;
+  top: 0;
+}
+
+.card-flat {
+  display: flex;
+  align-items: start;
+  overflow: hidden;
+  height: 250px;
+  width: 90%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  img {
+    height: 100%;
+    width: 80%;
+    padding: 2px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+}
+
+.card-flat .flat-info {
+  width: 80%;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 8px;
+  .flat-size {
+  }
+}
+
+.card-flat .price {
+  margin-top: 200px;
+  margin-right: 8px;
+}
+
+

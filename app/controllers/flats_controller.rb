@@ -3,10 +3,11 @@ class FlatsController < ApplicationController
   before_action :find_flat, only: [:show, :edit, :update, :destroy]
 
   def index
+    @city = params[:city].capitalize
     if params[:size] != ""
-      @flats = Flat.where("city = ? AND size = ?", params[:city].capitalize, params[:size])
+      @flats = Flat.where("city = ? AND size = ?", @city, params[:size])
     else
-      @flats = Flat.where("city = ?", params[:city].capitalize)
+      @flats = Flat.where("city = ?", @city)
     end
 
     @markers = @flats.geocoded.map do |flat|
@@ -14,6 +15,7 @@ class FlatsController < ApplicationController
         lat: flat.latitude,
         lng: flat.longitude,
         info_window: render_to_string(partial: "info_window", locals: { flat: flat }),
+        image_url: helpers.asset_url('house-icon.png')
       }
     end
   end
