@@ -19,6 +19,9 @@ puts "All data removed!"
 
 user_rm = User.create!(email: "user_rm@test.com", password: "test123", owner: false, name: "Mario", lastname: "Rossi" )
 user_mi = User.create!(email: "user_mi@test.com", password: "test123", owner: false, name: "Giuseppe", lastname: "Verdi" )
+user_admin = User.create!(email: "user_admin@test.com", password: "test123", owner: true, name: "Rupert", lastname: "Sciamenna" )
+
+
 
 flat_rm = Flat.create!(title: "Loft Colosseo", address: "Via Nicola Salvi, 65", description: "Amazing flat close to the city center of Rome!", city: "Rome", price: 200, size: 6, user_id: user_rm.id)
 flat_mi = Flat.create!(title: "Appartamento Centro Milano", address: "Corso Como", description: "Appartamentino in centro!", city: "Milan", price: 100, size: 4, user_id: user_mi.id)
