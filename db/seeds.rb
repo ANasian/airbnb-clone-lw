@@ -8,14 +8,11 @@
 
 require 'Date'
 
-array = [User.all, Flat.all, Booking.all]
+User.destroy_all
+Flat.destroy_all
+Booking.destroy_all
 puts "Remove all data from DB"
 
-array.each do |item|
-  item.destroy_all
-end
-
-puts "All data removed!"
 
 user_rm = User.create!(email: "user_rm@test.com", password: "test123", owner: false, name: "Mario", lastname: "Rossi" )
 user_mi = User.create!(email: "user_mi@test.com", password: "test123", owner: false, name: "Giuseppe", lastname: "Verdi" )
