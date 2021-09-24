@@ -2,11 +2,13 @@
   <div class="container-list">
     <h1>Results in the selected area</h1>
     <br>
-    <%= render partial: 'flat_list', collection: @flats %>
+    <% @flats.each do |flat| %>
+      <%= render partial: 'flat_list', locals: { flat: flat } %>
+    <% end %>
     </div>
 
   <div id="map"
-       style="height: 100vh; width: 40%;"
+       style="width: 50%; height: 100vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">    
   </div>

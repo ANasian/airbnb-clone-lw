@@ -1,11 +1,13 @@
-<div>
-  <h3> <%= @flat.title %> </h3>
+<div class="d-flex">
+  <h1> <%= @flat.title %> </h1>
+  <div>
     <p> <strong>Address: </strong> <%= @flat.address %>, <%= @flat.city %> </p>
     <p> <strong>Description: </strong><%= @flat.description %> </p>
     <p> <strong>Price: </strong><%= @flat.price %> €/night </p>
     <p> <strong>Capacity: </strong><%= @flat.size %> people</p>
+  </div>
+
+  <%= link_to 'Make a reservation', new_flat_booking_path(@flat) %>
+  <%= link_to "Back", :back %>
 </div>
-
-
-<%= link_to 'Make a reservation', new_flat_booking_path(@flat) %>
-<%= link_to "Back", :back %>
+<!-- render the partial _form from bookings -->
