@@ -1,7 +1,8 @@
-<%= simple_form_for (@booking) do |f| %>
-    <%= f.input :check_in %>
-    <%= f.input :check_out %>
-    <%= f.submit "Check", class: "btn btn-primary" %>
-<% end %>
-
-<!-- TO add the references to flat.city and flat.size once Flat is created -->
+<div id="form-booking-dates" data-unavailable="<%= @flat.unavailable_dates.to_json %>">
+  <!-- implement not showing the form if I am the owner of the flat -->
+  <%= simple_form_for ([@flat, @booking]) do |f| %>
+    <%= f.input :check_in, as: :string %>
+    <%= f.input :check_out, as: :string %>
+    <%= f.submit "Book Now", class: "btn btn-primary" %>
+  <% end %>
+</div>
