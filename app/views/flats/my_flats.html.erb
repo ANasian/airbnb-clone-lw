@@ -1,0 +1,14 @@
+<div class="container-list">
+  <% @flats.each do |flat| %>
+    <h1> <%= flat.title %> </h1>
+    <p> <strong>Address: </strong> <%= flat.address %>, <%= flat.city %> </p>
+    <p> <strong>Description: </strong><%= flat.description %> </p>
+    <p> <strong>Price: </strong><%= flat.price %> €/night </p>
+    <p> <strong>Capacity: </strong><%= flat.size %> people</p>
+   
+    <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-primary" %>
+    <%= link_to "Delete", flat_path(flat), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</div>
+
+  <%= link_to "Back", :back %>

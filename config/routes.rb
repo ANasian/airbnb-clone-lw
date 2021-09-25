@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
   resources :bookings, only: [ :index, :show, :destroy]
+  get "my_flats", to: "flats#my_flats"
 end
