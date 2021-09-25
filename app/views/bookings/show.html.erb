@@ -1,1 +1,40 @@
-<h1> Booking ID </h1>
+<div class="title-booking">
+  <h1><strong><%= @booking.user.name %></strong> here's your Booking</h1>  
+</div>
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-9">
+      <div class="card-flat-booking mb-3">
+        <img src="https://source.unsplash.com/random" alt="flat_photo">
+        <div class="flat-info-booking">
+          <p><%= @booking.flat.city %></p>
+          <h3><%= @booking.flat.title.upcase %></h3>
+          <div class="hr"><hr></div>
+          <div class="flat-size d-flex justify-content-around">
+            <p>· Number of Guests TO DO ·</p>
+            <div class="d-flex">
+              <i class="fas fa-euro-sign mx-2 mt-1"></i>
+              <p><%= @booking.flat.price.to_i %></p>
+              <p>/Night</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <%= render 'flash' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-9">
+      <div class="booking-info">
+        <strong><p>Your Booking Informations</p></strong>
+        <p>Check In Date: <em><%= @booking.check_in.strftime('%d-%m-%Y') %></em></p>
+        <p>Check Out Date: <em><%= @booking.check_out.strftime('%d-%m-%Y') %> </em></p>
+        <span><p>Total: <i class="fas fa-euro-sign mx-2 mt-1"></i> <%= (@booking.flat.price * (@booking.check_out - @booking.check_in).to_i).to_i %> </p></span>
+      </div>
+    </div>
+  </div>
+</div>
