@@ -1,0 +1,68 @@
+.title-booking {
+  margin-top: 16px;
+  text-align: center;
+  strong {
+    color: #FF5A5E;
+  }
+}
+
+.card-flat-booking {
+  display: flex;
+  position: relative;
+  align-items: start;
+  overflow: hidden;
+  height: 400px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-sizing: border-box;
+  img {
+    height: 100%;
+    width: inherit;
+    padding: 2px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+}
+
+.card-flat-booking .col-5 {
+  position: absolute;
+  top: 45%;
+  left: 52%;
+}
+
+.card-flat-booking .flat-info-booking {
+  width: inherit;
+  margin: 5px auto;
+  text-align:center;
+  // line-height: 0.5;
+}
+
+.card-flat .price {
+  margin-top: 200px;
+  margin-right: 8px;
+}
+
+.booking-info {
+  height: 200px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  font-size: 25px;
+  padding: 8px;
+  padding-left: 32px;
+  position: relative;
+  strong p {
+    text-align: center;
+  }
+  span {
+    position: absolute;
+    left: 75%;
+    bottom: 8px;
+  }
+}
+
+
+

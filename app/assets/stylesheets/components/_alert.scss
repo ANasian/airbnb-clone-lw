@@ -4,3 +4,20 @@
 //   right: 16px;
 //   z-index: 1000;
 // }
+.alert-booking {
+  border-radius: 8px;
+  box-shadow: 4px 4px rgba(0,0,0,0.1);
+  background-color: rgba(248, 249, 250, 0.8);
+  overflow: hidden;
+  padding: 8px;
+  margin-bottom: 16px;
+  height: 20vh;
+  font-size: 25px;
+  text-align: center;
+  i {
+    font-size: 90px;
+    color: #1edd88;
+    margin-top: 16px;
+    margin-bottom: 2px;
+  }
+}
