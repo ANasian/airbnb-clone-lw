@@ -1,13 +1,29 @@
-<div class="d-flex">
-  <h1> <%= @flat.title %> </h1>
-  <div>
-    <p> <strong>Address: </strong> <%= @flat.address %>, <%= @flat.city %> </p>
-    <p> <strong>Description: </strong><%= @flat.description %> </p>
-    <p> <strong>Price: </strong><%= @flat.price %> €/night </p>
-    <p> <strong>Capacity: </strong><%= @flat.size %> people</p>
+<div class="title-reviews mx-5">
+  <h1><%= @flat.title %></h1>
+  <p><%= @flat.address %>, <%= @flat.city %></p>
+  <div class="d-flex">
+    <p>Number of reviews</p>
+    <i class="fas fa-star"></i>
   </div>
-
-  <%= link_to 'Make a reservation', new_flat_booking_path(@flat) %>
-  <%= link_to "Back", :back %>
 </div>
-<!-- render the partial _form from bookings -->
+<div class="images mx-5">Images</div>
+<div class="info d-flex mx-5">
+  <div class="about-flat">
+    <!-- <hr> -->
+    <div class="d-flex align-items-center justify-content-center pt-3">
+      <p><i class="fas fa-users"></i> <%= @flat.size %></p>
+      <p><i class="fas fa-wifi"></i> Wi-Fi</p>
+      <p><i class="fas fa-home"></i> Entire Apartment</p>
+      <p><i class="fas fa-tv"></i> Tv</p>
+      <p><i class="far fa-map"></i> City Center</p>
+      <p><i class="fas fa-euro-sign"></i> <%= @flat.price.to_i %>/night</p>
+    </div>
+    <hr>
+    <h3>Entire Apartment - Host: <%= @flat.user.name %></h3>
+    <p> <%= @flat.description %> </p>
+  </div>
+  <div class="d-flex justify-content-center align-items-center col-4">
+    <%= render 'bookings/form', booking: @booking %>
+  </div>
+</div>
+  <!-- render the partial _form from bookings -->

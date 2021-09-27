@@ -4,9 +4,9 @@ class FlatsController < ApplicationController
 
   def index
     if params[:size].present?
-      @flats = Flat.where("city ILIKE ? AND size >= ?", params[:city], params[:size])
+      @flats = Flat.where("city ILIKE ? AND size >= ?", "#{params[:city]}%", params[:size])
     else
-      @flats = Flat.where("city ILIKE ?", params[:city])
+      @flats = Flat.where("city ILIKE ?", "#{params[:city]}%")
     end
 
     @markers = @flats.geocoded.map do |flat|
@@ -34,6 +34,7 @@ class FlatsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def edit
