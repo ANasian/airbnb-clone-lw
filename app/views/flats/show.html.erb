@@ -26,4 +26,14 @@
     <%= render 'bookings/form', booking: @booking %>
   </div>
 </div>
-  <!-- render the partial _form from bookings -->
+
+<div class="reviews-container">
+
+  <% @flat.bookings.each do |booking| %>
+    <li class="list-group-item">
+      <p><%= booking.review.content %></p>
+    </li>
+  <% end %>
+
+</div>
+<!-- render the partial _form from bookings -->
