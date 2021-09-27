@@ -1,0 +1,25 @@
+.images {
+  height: 50vh;
+}
+
+
+
+.info.d-flex {
+  column-gap: 30px;
+  .about-flat {
+  flex-grow: 1;
+  padding: 16px;
+  background-color: white;
+  box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+  border-radius: 5px;
+  p {
+    font-size: 1.2em;
+  }
+  .d-flex {
+    column-gap: 20px;
+  }
+}
+  .form {
+    align-self: center;
+  }
+}

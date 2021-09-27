@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def show

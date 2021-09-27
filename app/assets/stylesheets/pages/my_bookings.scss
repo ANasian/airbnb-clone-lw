@@ -1,0 +1,45 @@
+.flex-card-b {
+  column-gap: 40px;
+  row-gap: 10px;
+  box-sizing: border-box;
+}
+
+.card-flat-b {
+  display: flex;
+  // align-items: start;
+  overflow: hidden;
+  height: 250px;
+  width: 40%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-sizing: border-box;
+  img {
+    height: 100%;
+    max-width: 200px;
+    padding: 2px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+}
+
+.info-booking {
+  position:relative;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  .info-buttons {
+    width: 40%;
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    a {
+      appearance: none;
+      text-decoration: none;
+    }
+    .delete {
+      color: #FF5A5E;
+    }
+  }
+}
