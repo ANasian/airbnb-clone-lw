@@ -35,6 +35,7 @@ class FlatsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @reviews = @flat.reviews
   end
 
   def edit

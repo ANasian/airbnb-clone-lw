@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :flats do
-    resources :bookings, only: [ :new, :create ] do
-      resources :reviews, only: [ :new, :create, :destroy ]
-    end
+    resources :bookings, only: [ :new, :create ]
   end
-  resources :bookings, only: [ :index, :show, :destroy]
+
+  resources :bookings, only: [ :index, :show, :destroy] do
+    resources :reviews, only: [ :create, :destroy ]
+  end
+
   get "my_flats", to: "flats#my_flats"
 end
