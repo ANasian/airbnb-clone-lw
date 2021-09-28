@@ -26,4 +26,18 @@
     <%= render 'bookings/form', booking: @booking %>
   </div>
 </div>
-  <!-- render the partial _form from bookings -->
+
+<div class="reviews-container d-flex justify-content-center mt-4">
+
+  <% if @reviews.empty? %>
+    <p>Still no reviews</p>
+  <% end %>
+
+  <% @reviews.each do |review| %>
+    <li class="list-group-item mx-3">
+      <p><%= review.content %></p>
+    </li>
+  <% end %>
+
+</div>
+<!-- render the partial _form from bookings -->
