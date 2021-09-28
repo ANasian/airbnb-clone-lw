@@ -1,3 +1,7 @@
+.map-flats.d-flex {
+  column-gap: 0px;
+}
+
 .container-list {
   margin-top: 8px;
   margin-left: 16px;
@@ -10,7 +14,7 @@
   }
 }
 
-.d-flex #map {
+#map {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -39,9 +43,30 @@
 .card-flat .flat-info {
   width: 80%;
   margin-left: 16px;
-  margin-right: 16px;
+  // margin-right: 16px;
   margin-top: 8px;
   .flat-size {
+    position: relative;
+    .image-avatar {
+      position: absolute;
+      top: -35px;
+      left: 350px;
+      width: 50px;
+      height: 40px;
+    }
+    .description {
+      height: 60px;
+      width: 100%;
+      p {
+        height: 60px;
+        overflow: auto;
+        font-size: 16px;
+        text-align: justify;
+        line-height: 1.4;
+        opacity: .7;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :flats do
-    resources :bookings, only: [ :new, :create ] do
+    resources :bookings, only: [ :create ] do
       resources :reviews, only: [ :new, :create, :destroy ]
     end
   end

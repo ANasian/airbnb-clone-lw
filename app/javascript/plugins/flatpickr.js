@@ -1,6 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import "flatpickr/dist/themes/airbnb.css";
+import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 
 
 const initFlatpickr = () => {
@@ -16,6 +17,7 @@ const initFlatpickr = () => {
       disable: unavailableDates,
       dateFormat: "Y-m-d",
       altInput: true,
+      plugins: [new rangePlugin({ input: checkOutInput })]
     });
 
     checkInInput.addEventListener("change", (event) => {
