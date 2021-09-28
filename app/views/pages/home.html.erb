@@ -13,7 +13,7 @@
             <label class="search-label mb-1">Guests</label>
             <input class="search-input" type="number" placeholder="Add guests" class=""autocomplete="off" name="size" min="1">
           </div>
-          <div class="search-button d-flex align-items-center">
+          <div class="search-button d-flex align-items-center airbnb-button">
             <button type="submit" form="search-form">
               <a type="submit" class="text-decoration-none text-white ml-4">Search</a>
               <i class="fas fa-search ml-1"></i>
@@ -23,4 +23,46 @@
       </form>
     </div>
   </div>
+</div>
+
+<div>
+  <!-- City section -->
+    <section class="airbnb-container airbnb-neighborhood-container">
+      <h2 class="airbnb-neighborhood-title">Explore the world</h2>
+      <h3 class="airbnb-neighborhood-subtitle">Which are right for you?</h3>
+      <section class="airbnb-three-neighborhood-container">
+      <%= link_to :controller => "flats", :city => "Rome" do %>
+          <div class="airbnb-indiv-neighborhood-container">
+            <header class="airbnb-indiv-neighborhood-header rome image-mask-darken">
+              <div class="airbnb-indiv-neighborhood-header-content">
+                <h4 class="airbnb-indiv-neighborhood-title">Rome</h4>
+                <p class="airbnb-indiv-neighborhood-subtitle">La dolce vita</p>
+              </div>
+            </header>
+        <% end %>
+          <p class="airbnb-indiv-neighborhood-details">Hip Terrace Houses Anything Goes Vintage Clothing</p>
+        </div>
+
+      <%= link_to :controller => "flats", :city => "Milan" do %>
+        <div class="airbnb-indiv-neighborhood-container">
+          <header class="airbnb-indiv-neighborhood-header milan image-mask-darken">
+            <div class="airbnb-indiv-neighborhood-header-content">
+              <h4 class="airbnb-indiv-neighborhood-title">Milan</h4>
+              <p class="airbnb-indiv-neighborhood-subtitle">Big business. Little laneways.</p>
+            </div>
+          </header>
+      <% end %>
+          <p class="airbnb-indiv-neighborhood-details">Cake Shops Backpackers Hippies Beach Culture</p>
+        </div>
+        <div class="airbnb-indiv-neighborhood-container">
+          <header class="airbnb-indiv-neighborhood-header berlin image-mask-darken">
+            <div class="airbnb-indiv-neighborhood-header-content">
+              <h4 class="airbnb-indiv-neighborhood-title">Berlin</h4>
+              <p class="airbnb-indiv-neighborhood-subtitle">Baristas, Beards, Bikes.</p>
+            </div>
+          </header>
+          <p class="airbnb-indiv-neighborhood-details">Coffee Culture Working Nine To Five Federation Square Flinders Street Station</p>
+        </div>
+      </section>
+    </section>
 </div>
