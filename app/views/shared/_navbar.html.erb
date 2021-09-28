@@ -11,7 +11,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <strong > <%=  current_user.email %> </strong>  
             <%= link_to "Edit User", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "My Bookings", root_path, class: "dropdown-item" %>
+            <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
 
             <!-- If a User is Admin (owner of a Flat) -->
             <% if current_user.owner == true  %>

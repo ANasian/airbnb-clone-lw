@@ -1,8 +1,18 @@
-<div id="form-booking-dates" data-unavailable="<%= @flat.unavailable_dates.to_json %>">
+<div class="wrapper-form" id="form-booking-dates" data-unavailable="<%= @flat.unavailable_dates.to_json %>">
   <!-- implement not showing the form if I am the owner of the flat -->
   <%= simple_form_for ([@flat, @booking]) do |f| %>
-    <%= f.input :check_in, as: :string %>
-    <%= f.input :check_out, as: :string %>
-    <%= f.submit "Book Now", class: "btn btn-primary" %>
+  <div class="product-search-grow">
+    <div class="search-element text-center">
+      <%= f.input :check_in, as: :string, input_html: { class: "search-input" },
+                                          label_html: { class: "pt-3" } %>  
+    </div>
+    <div class="search-element-no-line text-center">
+      <%= f.input :check_out, as: :string, input_html: { class: "search-input" },
+                                           label_html: { class: "pt-3" } %>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= f.submit "Book Now", class: "book-now mt-3" %>
+  </div>
   <% end %>
 </div>
