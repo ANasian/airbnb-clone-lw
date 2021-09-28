@@ -40,5 +40,7 @@
 </div>
 
 <div class="reviews">
-  <%= render partial: "reviews/reviews_form", locals: { booking: @booking, review: @review } %>
+  <% if Date.today >= @booking.check_out %>
+    <%= render partial: "reviews/reviews_form", locals: { booking: @booking, review: @review } %>
+  <% end %>
 </div>

@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :flat
-  has_one :review, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   validates :check_in, :check_out, presence: true
   validate :check_out_after_check_in

@@ -27,11 +27,15 @@
   </div>
 </div>
 
-<div class="reviews-container">
+<div class="reviews-container d-flex justify-content-center mt-4">
 
-  <% @flat.bookings.each do |booking| %>
-    <li class="list-group-item">
-      <p><%= booking.review.content %></p>
+  <% if @reviews.empty? %>
+    <p>Still no reviews</p>
+  <% end %>
+
+  <% @reviews.each do |review| %>
+    <li class="list-group-item mx-3">
+      <p><%= review.content %></p>
     </li>
   <% end %>
 
