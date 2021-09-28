@@ -5,3 +5,234 @@
   height: 100%;
   margin: 0 auto;
 }
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* REUSABLE STYLES */
+.airbnb-container {
+  padding: 50px 5px;
+}
+
+.airbnb-button {
+  background-color: #ff5358;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 15px auto;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+  padding-left: 32px;
+}
+
+.airbnb-button:hover {
+  background-color: #E31C5E;
+}
+
+.airbnb-button-text {
+  padding: 10px;
+}
+
+.image-mask-darken {
+  position: relative;
+}
+
+.image-mask-darken:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  content: "";
+}
+
+/* HEADER */
+.airbnb-header {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+}
+
+.airbnb-logo-container {
+  width: 150px;
+}
+
+.airbnb-nav {
+  width: 350px;
+}
+
+.airbnb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 10px;
+}
+
+.airbnb-logo {
+  padding: 10px 30px;
+  width: 100px;
+}
+
+.airbnb-nav-element {
+  cursor: pointer;
+  padding: 10px 30px;
+}
+
+.airbnb-nav-element:last-child {
+  padding-left: 0;
+}
+
+/* HERO */
+.airbnb-main-photo {
+  align-items: center;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 550px;
+}
+
+.airbnb-intro-content {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 400px;
+}
+
+.airbnb-intro-title {
+  font-size: 64px;
+}
+
+.airbnb-intro-subtitle {
+  font-size: 16px;
+}
+
+/* Middle part of page */
+
+.airbnb-middle {
+  align-items: center;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 550px) {
+  .airbnb-middle {
+    flex-direction: row;
+  }
+}
+
+.airbnb-middle-box {
+  border: 1px solid #dbdbdb;
+  width: 96%;
+}
+
+@media (min-width: 550px) {
+  .airbnb-middle-box {
+    width: 48%;
+  }
+}
+
+.airbnb-middle-content-container {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 75px;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.airbnb-middle-icon {
+  padding-right: 12px;
+}
+
+.airbnb-middle-titles {
+  background-color: #edefed;
+  font-size: 14px;
+  padding: 12px 18px;
+}
+
+.airbnb-middle-content {
+  line-height: 1.4;
+  padding-right: 12px;
+}
+
+/* NEIGHBORHOODS */
+.airbnb-neighborhood-container {
+  padding: 50px 5px;
+}
+
+.airbnb-neighborhood-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.airbnb-neighborhood-subtitle {
+  font-size: 14px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.airbnb-three-neighborhood-container {
+  justify-content: center;
+  display: flex;
+}
+
+.airbnb-indiv-neighborhood-container {
+  margin: 1%;
+  width: 30%;
+}
+
+/* Note that here we are doing nested flex boxes */
+.airbnb-indiv-neighborhood-header {
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* approximate estimate */
+  justify-content: space-around;
+  text-align: center;
+}
+
+.rome  { background-image: url('https://source.unsplash.com/1600x900/?rome'); }
+.milan { background-image: url('https://source.unsplash.com/1600x900/?milan'); }
+.berlin { background-image: url('https://source.unsplash.com/1600x900/?berlin');}
+
+.airbnb-indiv-neighborhood-header-content {
+  position: absolute;
+}
+
+.airbnb-indiv-neighborhood-title {
+  font-size: 24px;
+}
+
+.airbnb-indiv-neighborhood-details {
+  background-color: #efefef;
+  border: 1px solid #dbdbdb;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 50px; /* makes the detail boxes look uniform */
+  padding: 20px;
+}
+
+hr {
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 40px;
+  width: 95%;
+}
+
+a {
+  text-decoration: none;
+}
