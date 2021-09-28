@@ -4,14 +4,15 @@
   <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
      <ul class="navbar-nav navbar-nav mr-auto">
       <% if user_signed_in? %>
+      <div class="d-flex align-items-center"><p><li style="color:#FF395B;"><%= current_user.name %></li></p></div>
       <div class="button-avatar d-flex justify-content-between align-items-center mx-3 p-2" id="navbarDropdown">
         <li class="nav-item dropdown">
           <i class="fas fa-bars mx-2" data-toggle="dropdown"></i>
           <%= image_tag "placeholder.png", class: "avatar", data: { toggle: "dropdown" } %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <strong > <%=  current_user.email %> </strong>  
-            <%= link_to "Edit User", edit_user_registration_path, class: "dropdown-item" %>
+            <p class="dropdown-item"><strong> <%=  current_user.email %> </strong>  </p>
             <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
+            <%= link_to "Edit User", edit_user_registration_path, class: "dropdown-item" %>
 
             <!-- If a User is Admin (owner of a Flat) -->
             <% if current_user.owner == true  %>

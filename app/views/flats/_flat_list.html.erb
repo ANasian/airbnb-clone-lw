@@ -1,14 +1,20 @@
 <a href="/flats/<%= flat.id %>" class="link-flat" target="_blank">
   <div class="card-flat mb-3">
-    <img src="https://source.unsplash.com/random" alt="flat_photo">
+    <!-- <img src="https://source.unsplash.com/featured/?apartment" alt="flat_photo"> -->
+    <img src="<%= flat.image_url %>" alt="flat_photo">
     <div class="flat-info">
       <small><%= flat.city %></small>
-      <h3><%= flat.title.upcase %></h3>
+      <p style="font-size: 25px;"><%= flat.title.upcase %></p>
       <div class="hr"><hr></div>
       <div class="flat-size">
-        <p><small>· <%= flat.size %> Guests · ·Wi-Fi·</small></p>
-        <p><%= flat.description %></p>
+      <div class="image-avatar"><%= image_tag 'placeholder.png' %></div>
+        <div class="d-flex">
+          <p style="font-size: 15px;">· <%= flat.size %> Guests &nbsp;·&nbsp;</p>
+          <p>  <i class="fas fa-wifi"></i> Wi-Fi &nbsp;·</p>
+        </div>
+        <div class="description"><p><%= flat.description %></p></div>
       </div>
+      <i class="fas fa-star" style="color:#E31C5E;"></i>
     </div>
     <div class="price d-flex">
       <i class="fas fa-euro-sign mx-2 mt-1"></i>

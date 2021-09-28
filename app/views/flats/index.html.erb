@@ -1,6 +1,6 @@
-<div class="d-flex">
+<div class="map-flats d-flex">
   <div class="container-list">
-    <h1>Results in the selected area</h1>
+    <h1>Results in the selected area - <span style="color:rgba(0, 0, 0, 0.5);"><%= @flats.first.city %></span></h1>
     <br>
     <% @flats.each do |flat| %>
       <%= render partial: 'flat_list', locals: { flat: flat } %>

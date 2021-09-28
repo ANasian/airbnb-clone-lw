@@ -13,3 +13,4 @@ Rails.application.routes.draw do
 
   get "my_flats", to: "flats#my_flats"
 end
+

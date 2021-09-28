@@ -10,10 +10,10 @@ class BookingsController < ApplicationController
     @review = Review.new
   end
 
-  def new
-    @booking = Booking.new
-    @flat = Flat.find(params[:flat_id])
-  end
+  # def new
+  #   @booking = Booking.new
+  #   @flat = Flat.find(params[:flat_id])
+  # end
 
   def create
     @booking = Booking.new(booking_params)
