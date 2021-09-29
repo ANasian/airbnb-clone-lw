@@ -21,6 +21,7 @@
 
   .d-flex {
     column-gap: 20px;
+    text-align: center;
   }
 }
   .form {
@@ -31,6 +32,11 @@
 .booking-container {
   display: flex;
   flex-direction: column;
+}
+
+.title-reviews {
+  text-align: center;
+  padding-bottom: 16px;
 }
 
 a {
