@@ -6,25 +6,28 @@
     <i class="fas fa-star"></i>
   </div>
 </div>
-<div class="images mx-5">Images</div>
 <div class="info d-flex mx-5">
+  <div><img src=<%= @flat.image_url %>></div>
   <div class="about-flat">
     <!-- <hr> -->
-    <div class="d-flex align-items-center justify-content-center pt-3">
+    <div class="d-flex align-items-center pt-3">
       <p><i class="fas fa-users"></i> <%= @flat.size %></p>
       <p><i class="fas fa-wifi"></i> Wi-Fi</p>
       <p><i class="fas fa-home"></i> Entire Apartment</p>
       <p><i class="fas fa-tv"></i> Tv</p>
       <p><i class="far fa-map"></i> City Center</p>
-      <p><i class="fas fa-euro-sign"></i> <%= @flat.price.to_i %>/night</p>
+      <p><i class="fas fa-euro-sign"></i> <strong style="color: #FF5A5E;"><%= @flat.price.to_i %>/night</strong></p>
     </div>
     <hr>
-    <h3>Entire Apartment - Host: <%= @flat.user.name %></h3>
-    <p> <%= @flat.description %> </p>
-  </div>
-  <div class="d-flex justify-content-center align-items-center col-4">
+      <h3>Entire Apartment - Host: <%= @flat.user.name %></h3>
+      <p> <%= @flat.description %> </p>
+
+  <div class="booking-container d-flex justify-content-center align-items-center">
     <%= render 'bookings/form', booking: @booking %>
   </div>
+
+  </div>
+
 </div>
 
 <div class="reviews-container d-flex justify-content-center mt-4">
