@@ -4,7 +4,7 @@
   <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
      <ul class="navbar-nav navbar-nav mr-auto">
       <% if user_signed_in? %>
-      <div class="d-flex align-items-center"><p><li style="color:#FF395B;"><%= current_user.name %></li></p></div>
+      <div class="d-flex align-items-center"><p><li>Welcome <strong><%= current_user.name %>!</strong></li></p></div>
       <div class="button-avatar d-flex justify-content-between align-items-center mx-3 p-2" id="navbarDropdown">
         <li class="nav-item dropdown">
           <i class="fas fa-bars mx-2" data-toggle="dropdown"></i>
