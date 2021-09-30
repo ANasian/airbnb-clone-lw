@@ -3,7 +3,13 @@
 </div>
 
 
+
 <div class="container mt-5">
+     <div class="alert-booking" >
+       <span style='font-size:80px;'>&#127881;</span>
+       <p>Your Booking has been made!</p>  
+     </div>
+  
   <div class="row justify-content-center">
     <div class="col-9">
       <div class="card-flat-booking mb-3">
@@ -20,20 +26,18 @@
               <p>/Night</p>
             </div>
           </div>
-        </div>
-        <div class="col-5">
-          <%= render 'flash' %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row justify-content-center mt-3">
+
+       <div class="row justify-content-center mt-3">
     <div class="col-9">
       <div class="booking-info">
         <strong><p>Your Booking Informations</p></strong>
         <p>Check In Date: <em><%= @booking.check_in.strftime('%d-%m-%Y') %></em></p>
         <p>Check Out Date: <em><%= @booking.check_out.strftime('%d-%m-%Y') %> </em></p>
         <span><p>Total: <i class="fas fa-euro-sign mx-2 mt-1"></i> <%= (@booking.flat.price * (@booking.check_out - @booking.check_in).to_i).to_i %> </p></span>
+      </div>
+    </div>
+  </div>
+        </div>
       </div>
     </div>
   </div>

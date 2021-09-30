@@ -1,0 +1,16 @@
+.book-now {
+  background-color: #ff5358;
+  box-shadow: rgba(0,0,0,.1) 0 6px 12px 0;
+  color: white;
+  width: 60%;
+  padding: 8px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: none;
+  appearance: none;
+  transition: 0.4s ease-in-out;
+}
+
+.book-now:hover {
+  background-color: #E31C5E;
+}
