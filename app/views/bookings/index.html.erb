@@ -17,7 +17,7 @@
               <em><p>Your Booking Details</p></em>
                 <p>Check In Date: <em><%= booking.check_in.strftime('%d-%m-%Y') %></em></p>
                 <p>Check Out Date: <em><%= booking.check_out.strftime('%d-%m-%Y') %> </em></p>
-              <span><p>Total: <i class="fas fa-euro-sign mx-2 mt-1"></i> <%= (booking.flat.price * (booking.check_out - booking.check_in).to_i).to_i %> </p></span>
+              <span><p>Total: <i class="fas fa-euro-sign mx-2 mt-1"></i> <strong style="color: #FF5A5E"><%= (booking.flat.price * (booking.check_out - booking.check_in).to_i).to_i %></strong></p></span>
             </div>
             <div class="info-buttons d-flex">
               <%= link_to "More info", flat_path(booking.flat.id), target: "_blank" %>
