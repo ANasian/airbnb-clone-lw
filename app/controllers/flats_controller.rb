@@ -40,6 +40,12 @@ class FlatsController < ApplicationController
     sum = 0
     @flat.reviews.each { |review| sum += review.rating }
     @flat_average = (sum / @flat.reviews.size).to_f unless @flat.reviews.empty?
+
+    @marker = {
+      lat: @flat.latitude,
+      lng: @flat.longitude,
+      image_url: helpers.asset_url('house-icon.png')
+    }
   end
 
   def edit
