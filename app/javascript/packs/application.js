@@ -29,13 +29,15 @@ import 'bootstrap';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Internal imports
-import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from '../plugins/flatpickr';
+import { initSmallMapbox } from '../plugins/init_small_mapbox';
+import { initMapbox } from '../plugins/init_mapbox';
 import { initBarRating } from '../plugins/star_rating';
 
 
 document.addEventListener('turbolinks:load', () => {
-  initMapbox();
   initFlatpickr();
+  initSmallMapbox();
+  initMapbox();
   initBarRating();
 });
