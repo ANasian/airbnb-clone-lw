@@ -7,7 +7,11 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @review = Review.new
+    if current_user.bookings.find_by(id: @booking).reviews.empty?
+      @review = Review.new
+    else
+      @review = false
+    end
   end
 
   # def new

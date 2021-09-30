@@ -1,17 +1,34 @@
 .images {
-  height: 50vh;
+  height: 100%;
+  // width: 150%;
+  img {
+    flex-grow: 1;
+    // height: 350px;
+  }
+  .wrapper-form {
+    position: sticky;
+    top: 16px;
+    align-self: start;
+    margin-left: 24px;
+  }
 }
-
-
 
 .info.d-flex {
   column-gap: 30px;
+  width: 70%;
+  height: 250px;
+  margin: 0 auto;
   .about-flat {
   flex-grow: 1;
   padding: 16px;
   background-color: white;
   box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
   border-radius: 5px;
+  h3 {
+    padding-top: 16px;
+    border-top: solid 1px rgba(0,0,0,0.2);
+    margin-top: 4px;
+  }
   p {
     font-size: 1.2em;
   }
@@ -23,3 +40,31 @@
     align-self: center;
   }
 }
+
+.review-container {
+    margin: 0 auto;
+    width: 80%;
+    .reviews {
+      height: 100%;
+    }
+    .reviews-form {
+      height: 100%;
+      margin-left: 10vw;
+      margin-right: -1vw;
+    }
+    .lists {
+      background-color: transparent;
+      list-style: none;
+      font-size: 18px;
+      text-align: justify;
+      line-height: 1.4;
+      opacity: .7;
+      margin-top: 8px;
+    }
+    p {
+      text-align: justify;
+      font-style: italic;
+      opacity: .9;
+      margin-top: 3px;
+    }
+  }

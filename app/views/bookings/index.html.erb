@@ -8,21 +8,24 @@
     <% @bookings.reverse.each do |booking| %>
       <!-- <a href="/flats/<%= booking.flat.id %>" class="link-flat" target="blank"> -->
         <div class="card-flat-b mb-3">
-          <img src="https://source.unsplash.com/random" alt="flat_photo">
+          <img src="<%= booking.flat.image_url %>" alt="flat_photo">
           <div class="info-booking">
               <small><%= booking.flat.city %></small>
               <h3><%= booking.flat.title.upcase %></h3>
-              <div class="hr"><hr></div>
+              <!-- <div class="hr"><hr></div> -->
             <div class="info-size w-100">
               <em><p>Your Booking Details</p></em>
                 <p>Check In Date: <em><%= booking.check_in.strftime('%d-%m-%Y') %></em></p>
                 <p>Check Out Date: <em><%= booking.check_out.strftime('%d-%m-%Y') %> </em></p>
               <span><p>Total: <i class="fas fa-euro-sign mx-2 mt-1"></i> <%= (booking.flat.price * (booking.check_out - booking.check_in).to_i).to_i %> </p></span>
             </div>
-            <div class="info-buttons d-flex justify-content-around">
+            <div class="info-buttons d-flex">
               <%= link_to "More info", flat_path(booking.flat.id), target: "_blank" %>
-              <%= link_to "Cancel Reservation", booking_path(booking.id), method: :delete, data: { confirm: "Are you sure you want to cancel this reservation?" }, class: "delete"  %>
+              <%= link_to "Leave a Review", booking_path(booking.id) %>
             </div>
+            <% if Date.today < booking.check_out %>
+              <div class="leave-review"><%= link_to "Cancel Reservation", booking_path(booking.id), method: :delete, data: { confirm: "Are you sure you want to cancel this reservation?" }, class: "delete", remote: true %></div>
+            <% end %>
           </div>
         </div>
       <!-- </a> -->

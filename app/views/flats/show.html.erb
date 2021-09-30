@@ -1,13 +1,19 @@
-<div class="title-reviews mx-5">
+<div class="title-reviews mx-5 text-center">
   <h1><%= @flat.title %></h1>
   <p><%= @flat.address %>, <%= @flat.city %></p>
-  <div class="d-flex">
-    <p>Number of reviews</p>
-    <i class="fas fa-star"></i>
+  <div class="d-flex justify-content-center">
+    <p><%= pluralize(@flat.reviews.size, "Review") %>&nbsp;</p>
+    <span><i class="fas fa-star"></i></span>
   </div>
 </div>
-<div class="images mx-5">Images</div>
-<div class="info d-flex mx-5">
+
+<div class="images d-flex justify-content-center mx-5 mb-3">
+    <img src="<%= @flat.image_url %>" alt="flat_image">
+    <div class="d-flex justify-content-center align-items-center ff-bb">
+      <%= render 'bookings/form', booking: @booking %>
+    </div>
+</div>
+<div class="info d-flex">
   <div class="about-flat">
     <!-- <hr> -->
     <div class="d-flex align-items-center justify-content-center pt-3">
@@ -18,26 +24,33 @@
       <p><i class="far fa-map"></i> City Center</p>
       <p><i class="fas fa-euro-sign"></i> <%= @flat.price.to_i %>/night</p>
     </div>
-    <hr>
-    <h3>Entire Apartment - Host: <%= @flat.user.name %></h3>
-    <p> <%= @flat.description %> </p>
-  </div>
-  <div class="d-flex justify-content-center align-items-center col-4">
-    <%= render 'bookings/form', booking: @booking %>
+    <div>
+      <h3>Entire Apartment - Host: <%= @flat.user.name %></h3>
+      <p> <%= @flat.description %> </p>
+    </div>
   </div>
 </div>
 
-<div class="reviews-container d-flex justify-content-center mt-4">
+  <div class="review-container">
+    <div class="d-flex justify-content-around">
+      <div class="reviews flex-grow-1 mr-5 mb-3 p-3">
+        <h5>Reviews</h5>
+        <% @reviews.each do |review| %>
+          <ul class="lists list-group list-group-flush">
+            <li class="border-bottom">
+              <span><%= review.booking.user.name %></span>
+              <small class="mx-3"><%= distance_of_time_in_words(Time.now, review.created_at) %> ago</small>
+             <div class="d-flex mt-1">
+              <% review.rating.times do %>
+                <i class="fas fa-star" style="color:#E31C5E;"></i>
+              <% end %>
+              </div>
+              <p id="review-<%= review.id %>"><%= review.content %></p>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <% if @reviews.empty? %>
-    <p>Still no reviews</p>
-  <% end %>
-
-  <% @reviews.each do |review| %>
-    <li class="list-group-item mx-3">
-      <p><%= review.content %></p>
-    </li>
-  <% end %>
-
-</div>
 <!-- render the partial _form from bookings -->
