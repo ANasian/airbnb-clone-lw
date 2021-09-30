@@ -34,10 +34,10 @@
     border-bottom: solid 1px rgba(0,0,0,0.2);
   }
   .info-buttons {
-    width: 40%;
+    width: 250px;
     position: absolute;
     top: 60%;
-    left: 60%;
+    left: 50%;
     column-gap: 10px;
     a {
       border: 1px solid #E8E9F3;
@@ -54,7 +54,7 @@
   .leave-review {
     position: absolute;
     top: 80%;
-    left: 60%;
+    left: 50%;
     a {
       border: 1px solid #E8E9F3;
       border-radius: 3px;
