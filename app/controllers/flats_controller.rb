@@ -36,6 +36,10 @@ class FlatsController < ApplicationController
   def show
     @booking = Booking.new
     @reviews = @flat.reviews
+
+    sum = 0
+    @flat.reviews.each { |review| sum += review.rating }
+    @flat_average = (sum / @flat.reviews.size).to_f unless @flat.reviews.empty?
   end
 
   def edit

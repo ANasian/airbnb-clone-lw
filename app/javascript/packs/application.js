@@ -31,9 +31,11 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // Internal imports
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from '../plugins/flatpickr';
+import { initBarRating } from '../plugins/star_rating';
 
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initFlatpickr();
+  initBarRating();
 });

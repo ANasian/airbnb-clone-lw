@@ -1,0 +1,28 @@
+.review-form {
+  width: 50%;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  padding: 16px;
+  // .form-control:focus {
+  //   text-decoration: none;
+  //   outline: #FF5A5E;
+  // }
+  label {
+    font-size: 20px;
+  }
+  .button {
+    font-size: 20px;
+    width: 50%;
+    margin-left: 25%;
+    background-color: #FF5A5E;
+    appearance: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+    box-shadow: 0 0 15px rgba(255, 90, 94,0.1); 
+  }
+}

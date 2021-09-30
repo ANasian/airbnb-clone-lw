@@ -45,6 +45,11 @@
   margin-left: 16px;
   // margin-right: 16px;
   margin-top: 8px;
+  #title {
+    font-size: 25px;
+    padding: 4px;
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+  }
   .flat-size {
     position: relative;
     .image-avatar {
